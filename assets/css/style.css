@@ -1,0 +1,75 @@
+body {
+	font-family: "Sevillana", cursive;
+}
+
+header {
+	display: block;
+	text-align: left;
+	margin: 50px;
+}
+
+main .ingreso,
+.mostrar {
+	display: inline-block;
+}
+
+.ingreso {
+	vertical-align: top;
+	margin: 0 500px 0 100px;
+}
+
+.ingreso input {
+	font-size: 20px;
+	border: none;
+	border-bottom: 1px solid #00ff;
+	padding: 0 60px 1em 0;
+}
+
+.mostrar {
+	border: 2px solid #433b3b;
+	border-radius: 5%;
+	height: 500px;
+	position: relative;
+}
+
+.mostrar textarea {
+	border: none;
+	width: 90%;
+	height: 45%;
+}
+
+.mostrar img {
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	bottom: 30px;
+}
+
+.mostrar p {
+	position: absolute;
+	left: 2px;
+	bottom: 10px;
+}
+
+.botones {
+	display: block;
+	align-items: center;
+	margin: 50px 400px 50px;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'Sevillana';
+}
+
+footer {
+	margin-top: 120px;
+}
+
+footer p {
+	text-align: center;
+	font-weight: 200;
+	font-size: 22px;
+}

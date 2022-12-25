@@ -2,28 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet" />
     <title>Encriptador/Desencritador</title>
 </head>
 
 <body>
     <header>
-        <img src="assets/img/Logo.jpg" alt="Logo Alura" class="logo">
+        <img src="assets/img/Logo.jpg" alt="Logo Alura" class="logo" />
     </header>
     <main>
-        <div class="ingreso">
+        <section class="ingreso">
             <input type="text" id="encr/desc" placeholder="Ingrese su texto aqui" />
-        </div>
-        <div class="mostrar">
+        </section>
+        <section class="mostrar">
             <textarea id="campoEncDes" cols="40" rows="20"></textarea>
-        </div>
-        <div class="botones">
-            <input type="button" value="Encriptar">
-            <input type="button" value="Desencriptar">
-        </div>
+            <div id="obj">
+                <img src="assets/img/muñeco/hand_rightmano_derechas.png" alt="manoIzquierda" />
+                <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
+            </div>
+        </section>
+        <section class="botones">
+            <input type="button" onclick="encriptar()" value="Encriptar" class="enviar" />
+            <input type="button" onclick="desencriptar()" value="Desencriptar" class="enviar" />
+        </section>
     </main>
+    <script>
+        function encriptar() {
+            var info = document.getElementById("encr/desc").value;
+            if (info) {
+                validandoText();
+            }
+
+        }
+
+        function desencriptar() { }
+
+        function validandoText() {
+            var x = document.getElementById("obj");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
     <footer>
         <p class="copyright">©Copyright - Daniel Arenas Morales 2022</p>
     </footer>
