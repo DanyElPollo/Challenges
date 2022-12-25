@@ -35,21 +35,24 @@
     </main>
     <script>
         function encriptar() {
-            var info = document.getElementById("encr/desc").value;
-            if (info) {
-                validandoText();
+            var text = document.getElementById("encr/desc").value;
+            console.log(text);
+            esconder(text);
+            /* const bocales = [
+                ["a", "ai"],
+                ["e", "enter"],
+                ["i", "imes"],
+                ["o", "ober"],
+                ["u", "ufat"],
+                ];*/
             }
 
-        }
-
-        function desencriptar() { }
-
-        function validandoText() {
+        function esconder(text) {
             var x = document.getElementById("obj");
-            if (x.style.display == "none") {
-                x.style.display = "block";
+            if (text != "") {
+                x.style.visibility = "hidden";
             } else {
-                x.style.display = "none";
+                x.style.visibility = "visible";
             }
         }
     </script>

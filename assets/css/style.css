@@ -19,6 +19,7 @@ main .ingreso,
 }
 
 .ingreso input {
+    font-family:  "Sevillana", cursive;;
 	font-size: 20px;
 	border: none;
 	border-bottom: 1px solid #00ff;
@@ -61,14 +62,14 @@ main .ingreso,
     width: 40%;
     padding: 15px;
     font-size: 25px;
-    font-family: 'Sevillana';
+    font-family:  "Sevillana", cursive;;
 }
 
 footer {
 	margin-top: 120px;
 }
 
-footer p {
+footer .copyright {
 	text-align: center;
 	font-weight: 200;
 	font-size: 22px;
