@@ -36,8 +36,10 @@
     <script>
         function encriptar() {
             var text = document.getElementById("encr/desc").value;
-            console.log(text);
             esconder(text);
+            for(let i = 0; i < text.size; i++){
+                console.log(text[i]);
+            }
             /* const bocales = [
                 ["a", "ai"],
                 ["e", "enter"],
