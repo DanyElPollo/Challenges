@@ -34,21 +34,34 @@
         </section>
     </main>
     <script>
+        /*::::: Variable constante para la encriptacion :::::*/
+        const vocales = [
+            ["a", "ai"],
+            ["e", "enter"],
+            ["i", "imes"],
+            ["o", "ober"],
+            ["u", "ufat"],
+        ];
+
+        /*::::: Funcion para enviar datos a consola. :::::*/
+        function consola(x) {
+            console.log(x);
+        }
+
+        /*::::: Funcion para enviar texto al cuadro de mostrar :::::*/
+        function mostrarText(x) {
+            return document.getElementById("campoEncDes").value = x;
+        }
+
+        /*::::: Funcion para encriptar texto :::::*/
         function encriptar() {
             var text = document.getElementById("encr/desc").value;
             esconder(text);
-            for(let i = 0; i<=text.length; i++){
-                console.log(text[i]);
-            }
-            /* const bocales = [
-                ["a", "ai"],
-                ["e", "enter"],
-                ["i", "imes"],
-                ["o", "ober"],
-                ["u", "ufat"],
-                ];*/
-            }
+            var textoEncriptado = text.replace(/a|e|i|o|u/gi, vocales[1][1]);
+            mostrarText(textoEncriptado);
+        }
 
+        /*::::: Funcion para esconder imagenes :::::*/
         function esconder(text) {
             if (text != "") {
                 document.getElementById("obj").style.visibility = "hidden";
@@ -58,7 +71,9 @@
         }
     </script>
     <footer>
-        <p class="copyright">©Copyright - Daniel Arenas Morales 2022 - modificado</p>
+        <p class="copyright">
+            ©Copyright - Daniel Arenas Morales 2022 - modificado
+        </p>
     </footer>
 </body>
 
