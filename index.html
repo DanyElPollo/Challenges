@@ -17,10 +17,12 @@
     <header>
         <img src="assets/img/Logo.jpg" alt="Logo Alura" class="logo" />
     </header>
+
     <main>
-        <section class="ingreso">
+        <div class="ingreso">
             <input type="text" id="encr/desc" placeholder="Ingrese su texto aqui" />
-        </section>
+        </div>
+
         <section class="mostrar">
             <textarea id="campoEncDes" cols="40" rows="20"></textarea>
             <div id="obj">
@@ -28,11 +30,13 @@
                 <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
             </div>
         </section>
-        <section class="botones">
+
+        <div class="botones">
             <input type="button" onclick="encriptar()" value="Encriptar" class="enviar" />
             <input type="button" onclick="desencriptar()" value="Desencriptar" class="enviar" />
-        </section>
+        </div>
     </main>
+
     <script>
         /*::::: Variable constante para la encriptacion :::::*/
         const vocales = [
@@ -65,8 +69,11 @@
         function esconder(text) {
             if (text != "") {
                 document.getElementById("obj").style.visibility = "hidden";
+                document.getElementById("campoEncDes").style.visibility = "visible";
             } else {
                 document.getElementById("obj").style.visibility = "visible";
+                document.getElementById("campoEncDes").style.visibility = "hidden";
+
             }
         }
     </script>

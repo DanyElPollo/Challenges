@@ -34,6 +34,7 @@ main .ingreso,
 }
 
 .mostrar textarea {
+	visibility: hidden;
 	border: none;
 	width: 90%;
 	height: 45%;
