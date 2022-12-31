@@ -29,6 +29,9 @@
                 <img src="assets/img/muñeco/hand_rightmano_derechas.png" alt="manoIzquierda" />
                 <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
             </div>
+            <div>
+                <input type="button" value="Copiar" onclick="copiar()"" class="enviar">
+            </div>
         </section>
 
         <div class="botones">
@@ -47,6 +50,8 @@
             ["u", "ufat"],
         ];
 
+        
+
         /*::::: Funcion para enviar datos a consola. :::::*/
         function consola(x) {
             console.log(x);
@@ -61,8 +66,19 @@
         function encriptar() {
             var text = document.getElementById("encr/desc").value;
             esconder(text);
-            var textoEncriptado = text.replace(/a|e|i|o|u/gi, vocales[1][1]);
+            var textoEncriptado = text.replace(/e/gi, vocales[1][1]).replace(/i/gi, vocales[2][1]).replace(/a/gi, vocales[0][1])
+            .replace(/o/gi, vocales[3][1]).replace(/u/gi, vocales[4][1]);
             mostrarText(textoEncriptado);
+        }
+
+        /*::::: Funcion para desencriptar texto :::::*/
+        function desencriptar(){
+            var text = document.getElementById("encr/desc").value;
+            esconder(text);
+            var textoDes = text.replace(/enter/gi, vocales[1][0]).replace(/imes/gi, vocales[2][0]).replace(/ai/gi, vocales[0][0])
+            .replace(/ober/gi, vocales[3][0]).replace(/ufat/gi, vocales[4][0]);
+            consola(textoDes);
+            mostrarText(textoDes);
         }
 
         /*::::: Funcion para esconder imagenes :::::*/
@@ -76,7 +92,15 @@
 
             }
         }
+
+        /*::::: Funcion para copiar texto encriptado :::::*/
+        function copiar(){
+            document.getElementById("campoEncDes").focus();
+            document.execCommand("selectAll");
+            document.execCommand("copy");
+        }
     </script>
+
     <footer>
         <p class="copyright">
             ©Copyright - Daniel Arenas Morales 2022 - modificado
