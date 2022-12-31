@@ -52,6 +52,15 @@ main .ingreso,
 	bottom: 10px;
 }
 
+#copi{
+	display: none;
+	position: static;
+	text-align: center;
+	border: none;
+	color: rgb(98, 98, 214);
+	border-radius: 10%;
+}
+
 .botones {
 	display: block;
 	align-items: center;

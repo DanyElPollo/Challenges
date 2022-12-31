@@ -29,8 +29,8 @@
                 <img src="assets/img/muñeco/hand_rightmano_derechas.png" alt="manoIzquierda" />
                 <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
             </div>
-            <div>
-                <input type="button" value="Copiar" onclick="copiar()"" class="enviar">
+            <div id="copi">
+                <input type="button" value="Copiar" onclick="copiar()" class="enviar">
             </div>
         </section>
 
@@ -86,10 +86,11 @@
             if (text != "") {
                 document.getElementById("obj").style.visibility = "hidden";
                 document.getElementById("campoEncDes").style.visibility = "visible";
+                document.getElementById("copi").style.display = "block";
             } else {
                 document.getElementById("obj").style.visibility = "visible";
                 document.getElementById("campoEncDes").style.visibility = "hidden";
-
+                document.getElementById("copi").style.display = "none";
             }
         }
 
