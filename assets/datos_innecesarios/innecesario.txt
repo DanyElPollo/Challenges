@@ -1,0 +1,2 @@
+recordar comodamente como se debe realizar las cuestiones,
+ya que se complica lo demás al no saber manejar JavaScript
