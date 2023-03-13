@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet" />
-    <title>Encriptador Profesional - by Daniel</title>
+    <title>Encrypt-Decrypt</title>
 </head>
 
 <body>
@@ -23,30 +24,37 @@
             <input type="text" id="encr/desc" placeholder="Ingrese su texto aqui" />
         </div>
 
-        <section class="mostrar">
-            <textarea id="campoEncDes" cols="40" rows="20"></textarea>
-            <div id="obj">
-                <img src="assets/img/muñeco/hand_rightmano_derechas.png" alt="manoIzquierda" />
-                <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
-            </div>
-            <div id="copi">
-                <input type="button" value="Copiar" onclick="copiar()" class="enviar" />
-            </div>
-        </section>
+        <div class="container caja1">
+            <section class="mostrar">
 
-        <div class="botones">
-            <input type="button" onclick="encriptar()" value="Encriptar" class="enviar" />
-            <input type="button" onclick="desencriptar()" value="Desencriptar" class="enviar" />
+                <div class="d-none">
+                    <textarea id="campoEncDes" cols="40" rows="20"></textarea>
+                </div>
+                <div id="obj">
+                    <img src="assets/img/muñeco/hand_rightmano_derechas.png" alt="manoIzquierda" />
+                    <p>No se ha encontrado texto a Encriptar/Desencriptar</p>
+                </div>
+                <div id="copi" class="botones text-center">
+                    <input type="button" value="Copiar" onclick="copiar()" class="enviar" />
+                </div>
+            </section>         
+        </div>
+
+        <div class="container justify-content-center caja2">
+            <div class="botones text-center">
+                <input type="button" onclick="encriptar()" value="Encriptar" class="enviar" />
+                <input type="button" onclick="desencriptar()" value="Desencriptar" class="enviar" />
+            </div>
         </div>
     </main>
 
     <script src="assets/js/index.js"></script>
 
-    <footer>
-        <p class="copyright">
-            ©Copyright - Daniel Arenas Morales 2022 - modificado
-        </p>
-    </footer>
 </body>
 
+<footer>
+    <p class="copyright">
+        ©Copyright - Daniel Arenas Morales 2022 - modificado
+    </p>
+</footer>
 </html>

@@ -19,18 +19,30 @@ main .ingreso,
 }
 
 .ingreso input {
-    font-family:  "Sevillana", cursive;;
+    font-family:  "Sevillana", cursive;
 	font-size: 20px;
 	border: none;
 	border-bottom: 1px solid #00ff;
 	padding: 0 60px 1em 0;
 }
 
+.caja1{
+	left: 93px;
+    top: 210px;
+    position: absolute;
+}
+
 .mostrar {
 	border: 2px solid #433b3b;
-	border-radius: 5%;
-	height: 500px;
-	position: relative;
+    border-radius: 5%;
+    height: 280px;
+    width: 250px;
+    position: relative;
+}
+
+.mostrar #obj{
+	top: 100px;
+    position: relative;
 }
 
 .mostrar textarea {
@@ -50,6 +62,7 @@ main .ingreso,
 	position: absolute;
 	left: 2px;
 	bottom: 10px;
+	text-align: center;
 }
 
 #copi{
@@ -61,16 +74,16 @@ main .ingreso,
 	border-radius: 10%;
 }
 
-.botones {
-	display: block;
-	align-items: center;
-	margin: 50px 400px 50px;
+.caja2{
+	
 }
 
+.botones {
+	
+}
+
+
 .enviar{
-    width: 40%;
-    padding: 15px;
-    font-size: 25px;
     font-family:  "Sevillana", cursive;;
 }
 
