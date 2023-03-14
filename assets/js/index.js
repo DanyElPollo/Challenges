@@ -38,6 +38,8 @@
         /*::::: Funcion para esconder imagenes :::::*/
         function esconder(text) {
             if (text != "") {
+                document.getElementById("text_area").classList.remove("d-none");
+                document.getElementById("text_area").classList.add("d-flex");
                 document.getElementById("obj").style.visibility = "hidden";
                 document.getElementById("campoEncDes").style.visibility =
                     "visible";
