@@ -1,13 +1,11 @@
-html,
-body{
-	height: 100%;
-	width: 100%;
+html,body{
+	height: 100% !important;
+	width: 100% !important;
 	background-image: url('../img/fondo/cool-background.png');
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 	font-family: "Sevillana", cursive !important;
-	/* font-weight: bold; */
 }
 
 .logo {
@@ -16,7 +14,7 @@ body{
 
 #enc-des {
 	padding-left: 10px;
-	max-width: 300px;
+	width: 300px;
 	border-radius: 10px;
 	border: none;
 	background-color:rgb(223 223 223);
@@ -27,6 +25,8 @@ body{
 	background-color: #7ba9e5;
 	border-radius: 1rem;
 	margin: 10px 5px 0px 0px;
+	width: 120px;
+    height: 35px;
 }
 
 #respuesta {
