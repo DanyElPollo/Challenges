@@ -1,98 +1,51 @@
-body {
-	font-family: "Sevillana", cursive;
+html,
+body{
+	height: 100%;
+	width: 100%;
+	background-image: url('../img/fondo/cool-background.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	font-family: "Sevillana", cursive !important;
+	/* font-weight: bold; */
 }
 
-header {
-	display: block;
-	text-align: left;
-	margin: 50px;
+.logo {
+	padding: 5rem 0rem 5rem 0rem;
 }
 
-main .ingreso,
-.mostrar {
-	display: inline-block;
-}
-
-.ingreso {
-	vertical-align: top;
-	margin: 0 500px 0 100px;
-}
-
-.ingreso input {
-    font-family:  "Sevillana", cursive;
-	font-size: 20px;
+#enc-des {
+	padding-left: 10px;
+	max-width: 300px;
+	border-radius: 10px;
 	border: none;
-	border-bottom: 1px solid #00ff;
-	padding: 0 60px 1em 0;
+	background-color:rgb(223 223 223);
 }
 
-.caja1{
-	left: 93px;
-    top: 210px;
-    position: absolute;
-}
-
-.mostrar {
-	border: 2px solid #433b3b;
-    border-radius: 5%;
-    height: 280px;
-    width: 250px;
-    position: relative;
-}
-
-.mostrar #obj{
-	top: 100px;
-    position: relative;
-}
-
-.mostrar textarea {
+.boton {
 	border: none;
-	width: 90%;
-	height: 45%;
+	background-color: #7ba9e5;
+	border-radius: 1rem;
+	margin: 10px 5px 0px 0px;
 }
 
-.mostrar img {
-	position: absolute;
-	top: 50%;
-	left: 40%;
-	bottom: 30px;
+#respuesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 55px;
 }
 
-.mostrar p {
-	position: absolute;
-	left: 2px;
-	bottom: 10px;
-	text-align: center;
-}
-
-#copi{
-	display: none;
-	position: static;
-	text-align: center;
-	border: none;
-	color: rgb(98, 98, 214);
-	border-radius: 10%;
-}
-
-.caja2{
-	
-}
-
-.botones {
-	
-}
-
-
-.enviar{
-    font-family:  "Sevillana", cursive;;
-}
 
 footer {
-	margin-top: 120px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
-footer .copyright {
-	text-align: center;
-	font-weight: 200;
-	font-size: 22px;
+footer p{
+	color: black;
 }
