@@ -6,6 +6,7 @@ html,body{
     background-size: cover;
     background-position: center center;
 	font-family: "Sevillana", cursive !important;
+	font-size: 20px;
 }
 
 .logo {
@@ -37,6 +38,11 @@ html,body{
     height: 350px;
     border: 1px solid black;
     border-radius: 55px;
+}
+
+#parrafo{
+	font-size: 1.6rem;
+    text-align: center;
 }
 
 
