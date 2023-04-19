@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 });
 
-async function validarCampo(opcion, texto) {
+function validarCampo(opcion, texto) {
     if (texto == "") {
         Swal.fire({
             icon: "warning",
@@ -15,18 +15,21 @@ async function validarCampo(opcion, texto) {
             text: "No se encontro frace para encriptar/desencriptar.",
         });
     } else {
-        try {
-            const miTexto = await envioDatos(opcion, texto);
-            $("#mano").removeClass("d-flex").addClass("d-none");
-            $("#parrafo").text(miTexto).removeClass("d-none");
-        } catch (error) {
-            console.error(error);
-            Swal.fire({
-                icon: "error",
-                title: "Ocurrió un error",
-                text: "No se pudo procesar la solicitud. Intente de nuevo más tarde.",
+        envioDatos(opcion, texto)
+            .then((respuesta) => {
+                $("#mano").removeClass("d-flex").addClass("d-none");
+                $("#parrafo").text(respuesta).removeClass("d-none");
+            })
+            .catch((respuesta) => {
+                console.error(respuesta);
+                Swal.fire({
+                    icon: "error",
+                    title: "Ocurrió un error",
+                    text: "No se pudo procesar la solicitud. Intente de nuevo más tarde.",
+                });
+                $("#mano").removeClass("d-none").addClass("d-flex");
+                $("#parrafo").addClass("d-none");
             });
-        }
     }
 }
 
