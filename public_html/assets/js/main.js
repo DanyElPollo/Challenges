@@ -5,6 +5,26 @@ $(document).ready(function () {
         validarCampo(opcion, $("#enc-des").val());
     });
 
+    $("#copiar").on("click", function () {
+        const text = $("#parrafo").text();
+        if(text == ""){
+            return Swal.fire({
+                icon: "error",
+                title: "Error al copiar",
+                text: "Se ha producido un error al copiar los datos",
+            });
+        }
+        Swal.showLoading();
+        setTimeout(()=>{
+            Swal.hideLoading();
+            navigator.clipboard.writeText(text);
+            Swal.fire({
+                icon: "success",
+                title: "Exito",
+                text: "Texto copiado existosamente",
+            })    
+        }, 500);
+    });
 });
 
 function validarCampo(opcion, texto) {
@@ -19,6 +39,7 @@ function validarCampo(opcion, texto) {
             .then((respuesta) => {
                 $("#mano").removeClass("d-flex").addClass("d-none");
                 $("#parrafo").text(respuesta).removeClass("d-none");
+                $("#copiar").removeClass("d-none");
             })
             .catch((respuesta) => {
                 console.error(respuesta);
@@ -29,6 +50,7 @@ function validarCampo(opcion, texto) {
                 });
                 $("#mano").removeClass("d-none").addClass("d-flex");
                 $("#parrafo").addClass("d-none");
+                $("#copiar").addClass("d-none");
             });
     }
 }

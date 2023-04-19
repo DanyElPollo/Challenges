@@ -36,17 +36,21 @@
                     <div class="row">
                         <div class="pb-5 col-12 col-md-6 col-lg-8 ">
                             <div class="d-flex justify-content-center justify-content-lg-start">
-                                <input id="enc-des" class="mb-3" type="text" placeholder="Encriptar/Desencriptar">
+                                <input id="enc-des" class="mb-3" type="text" placeholder="Encriptar/Desencriptar" maxlength="100">
                             </div>
+                            <p class="" style="font-size: 16px;">*Maximo de 100 caracteres</p>
                             <div class="d-flex justify-content-center justify-content-lg-start">
                                 <button id="enc" class="valido boton" type="submit" value="e">Encriptar</button>
                                 <button id="desenc" class="valido boton" type="submit" value="d">Desencriptar</button>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4" id="respuesta">
-                            <img id="mano" class="d-flex jsutify-content-center"
-                                src="./assets/img/muñeco/hand_rightmano_derechas.png" alt="">
-                            <p id="parrafo" class="d-none text-white"></p>
+                            <div class="d-flex flex-column">
+                                <img id="mano" class="d-flex jsutify-content-center"
+                                    src="./assets/img/muñeco/hand_rightmano_derechas.png" alt="">
+                                <p id="parrafo" class="d-none text-white"></p>
+                                <button id="copiar" class="d-none boton align-self-center" type="submit" value="c">Copiar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
