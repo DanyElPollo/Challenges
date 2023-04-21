@@ -27,7 +27,7 @@ Como iniciar:
     
     node server.js
     
-    para hacerlo debes ejecutarlo en la raiz del proyecto, la ruta cambiara dependiendo de donde lo descargaste o clonaste.
+    para hacerlo debes ejecutarlo en la raiz del proyecto, la ruta cambiara dependiendo de donde lo guardaste.
     
       Ejemplo: C:\wamp64\www\CURSOS\ONE\html\Challenges\Encriptador>node server.js
       
@@ -58,6 +58,6 @@ How to start:
     
      nodeserver.js
     
-     To do it you must run it in the root of the project, the path will change depending on where you downloaded or cloned it.
+     To do it you must run it in the root of the project, the path will change depending on where you save it.
     
        Example: C:\wamp64\www\COURSES\ONE\html\Challenges\Encryptor>node server.js
